@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/card_background"
+    android:elevation="4dp"
+    android:layout_margin="8dp">
+
+    <!-- Верхняя строка с названием и количеством упражнений -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
+
+        <!-- Иконка тренировки -->
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="💪"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/icon_workout_background"
+            android:layout_marginEnd="16dp" />
+
+        <!-- Информация о тренировке -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/workoutNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Название тренировки"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/workoutExercisesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 упражнений"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+        <!-- Бейдж количества упражнений -->
+        <TextView
+            android:id="@+id/exerciseCountBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="4dp"
+            android:background="@drawable/badge_background"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Кнопка начала тренировки -->
+    <Button
+        android:id="@+id/startWorkoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="🎯 НАЧАТЬ ТРЕНИРОВКУ"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:background="@drawable/button_success"
+        android:textColor="@color/white"
+        android:elevation="2dp" />
+
+</LinearLayout>

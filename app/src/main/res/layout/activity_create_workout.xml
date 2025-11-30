@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="➕ Создание тренировки"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_gravity="center"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Карточка основной информации -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:background="@drawable/card_background"
+            android:elevation="4dp"
+            android:backgroundTint="@color/surface_white"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📝 Основная информация"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Поле названия тренировки -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Название тренировки"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/workoutNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:hint="Например: Силовая тренировка"
+                    android:textSize="18sp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:background="@drawable/edit_text_rounded"
+                    android:textColor="@color/text_primary" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Карточка добавления упражнений -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:background="@drawable/card_background"
+            android:elevation="4dp"
+            android:backgroundTint="@color/surface_white"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💪 Добавление упражнений"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Поле названия упражнения -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Название упражнения"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/exerciseNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:hint="Например: Подтягивания"
+                    android:textSize="18sp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:background="@drawable/edit_text_rounded"
+                    android:textColor="@color/text_primary" />
+
+            </LinearLayout>
+
+            <!-- Поле количества подходов -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Количество подходов"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/setsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:hint="Например: 4"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:background="@drawable/edit_text_rounded"
+                    android:textColor="@color/text_primary" />
+
+            </LinearLayout>
+
+            <!-- Кнопка добавления упражнения -->
+            <Button
+                android:id="@+id/addExerciseButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="➕ ДОБАВИТЬ УПРАЖНЕНИЕ"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:background="@drawable/button_secondary"
+                android:textColor="@color/white"
+                android:elevation="4dp" />
+
+        </LinearLayout>
+
+        <!-- Карточка списка упражнений -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:background="@drawable/card_background"
+            android:elevation="4dp"
+            android:backgroundTint="@color/surface_white"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📋 Список упражнений"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Нажмите на упражнение для удаления"
+                android:textSize="14sp"
+                android:textColor="@color/text_light"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Список упражнений -->
+            <ListView
+                android:id="@+id/exercisesListView"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:background="@drawable/list_background"
+                android:divider="@color/text_light"
+                android:dividerHeight="1dp" />
+
+        </LinearLayout>
+
+        <!-- Кнопка сохранения -->
+        <Button
+            android:id="@+id/saveWorkoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="💾 СОХРАНИТЬ ТРЕНИРОВКУ"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:background="@drawable/button_success"
+            android:textColor="@color/white"
+            android:elevation="6dp" />
+
+    </LinearLayout>
+
+</ScrollView>

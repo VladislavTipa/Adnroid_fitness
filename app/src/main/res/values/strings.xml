@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Фитнес Трекер</string>
+    <string name="login">Войти</string>
+    <string name="create_workout">Создать тренировку</string>
+    <string name="workout_history">История тренировок</string>
+    <string name="logout">Выйти</string>
+</resources>

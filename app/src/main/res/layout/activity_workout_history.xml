@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_light"
+    android:padding="16dp">
+
+    <!-- Заголовок -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📊 История тренировок"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Кнопка обновления -->
+    <Button
+        android:id="@+id/refreshButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="🔄 ОБНОВИТЬ ДАННЫЕ"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:background="@drawable/button_primary"
+        android:textColor="@color/white"
+        android:elevation="4dp"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Контейнер с табами -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/tab_background"
+        android:padding="4dp">
+
+        <Button
+            android:id="@+id/tabWorkouts"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="🏋️ Мои тренировки"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_selected"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/tabHistory"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="📈 История"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:background="@drawable/tab_unselected"
+            android:textColor="@color/text_secondary" />
+
+    </LinearLayout>
+
+    <!-- Контейнер для контента -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Вкладка Мои тренировки -->
+        <LinearLayout
+            android:id="@+id/workoutsTab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Доступные тренировки"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="8dp" />
+
+            <ListView
+                android:id="@+id/workoutsListView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <!-- Вкладка История -->
+        <LinearLayout
+            android:id="@+id/historyTab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Завершенные тренировки"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="8dp" />
+
+            <ListView
+                android:id="@+id/historyListView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

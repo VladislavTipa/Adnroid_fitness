@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/card_background"
+    android:elevation="3dp"
+    android:layout_margin="6dp">
+
+    <!-- Верхняя строка с названием и датой -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
+
+        <!-- Иконка завершенной тренировки -->
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="✅"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:background="@drawable/icon_history_background"
+            android:layout_marginEnd="16dp" />
+
+        <!-- Основная информация -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/historyWorkoutNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Название тренировки"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/historyDateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22 ноября 2025"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+        <!-- Бейдж выполнения -->
+        <TextView
+            android:id="@+id/completionBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100%"
+            android:textSize="11sp"
+            android:textColor="@color/white"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="3dp"
+            android:background="@drawable/badge_success"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Детали тренировки -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <!-- Длительность -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⏱️"
+                android:textSize="12sp"
+                android:layout_marginEnd="6dp" />
+
+            <TextView
+                android:id="@+id/historyDurationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 мин"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary" />
+
+        </LinearLayout>
+
+        <!-- Прогресс выполнения -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📊"
+                android:textSize="12sp"
+                android:layout_marginEnd="6dp" />
+
+            <TextView
+                android:id="@+id/historyExercisesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/0 упр."
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Прогресс-бар -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <View
+            android:id="@+id/progressBar"
+            android:layout_width="0dp"
+            android:layout_height="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/progress_background"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/progressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textSize="11sp"
+            android:textColor="@color/text_secondary" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="20dp"
+    android:background="@drawable/exercise_item_background"
+    android:layout_margin="8dp"
+    android:elevation="2dp"
+    android:gravity="center_vertical">
+
+    <!-- Иконка упражнения -->
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="🏋️"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/icon_background"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Информация об упражнении -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/exerciseNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Название упражнения"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary" />
+
+        <TextView
+            android:id="@+id/exerciseSetsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 подходов"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+
+    <!-- Иконка удаления -->
+    <TextView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:text="❌"
+        android:textSize="12sp"
+        android:gravity="center" />
+
+</LinearLayout>

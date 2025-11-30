@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:layout_marginBottom="8dp"
+    android:elevation="2dp">
+
+    <TextView
+        android:id="@+id/exerciseNameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Упражнение"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#2C3E50" />
+
+    <TextView
+        android:id="@+id/setsInfoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Выполнено: 0/0"
+        android:textSize="14sp"
+        android:textColor="#7F8C8D"
+        android:layout_marginTop="4dp" />
+
+    <LinearLayout
+        android:id="@+id/progressContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/currentSetsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Текущие подходы"
+        android:textSize="14sp"
+        android:textColor="#27AE60"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/previousSetsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Предыдущие подходы"
+        android:textSize="12sp"
+        android:textColor="#95A5A6"
+        android:alpha="0.7"
+        android:layout_marginTop="2dp" />
+
+</LinearLayout>
